@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Ví dụ xử lý URL</title>
+</head>
+<body>
+
+    <h1>Kết quả từ File JS:</h1>
+    <div id="display-url" style="color: blue; font-weight: bold;"></div>
+
+    <script src="a_bogus.js"></script>
+
+    <script>
+        // Giả sử đây là URL bạn muốn truyền vào
+        const myUrl = "/aweme/v1/web/general/search/single/?device_platform=webapp&aid=6383&channel=channel_pc_web&search_channel=aweme_general&enable_history=1&keyword=slime&search_source=normal_search&query_correct_type=1&is_filter_search=0&from_group_id=&disable_rs=1&offset=0&count=10&need_filter_settings=0&list_type=single&search_id=20260401083748844BC26797767365746A&update_version_code=170400&pc_client_type=1&pc_libra_divert=Windows&support_h265=1&support_dash=1&cpu_core_num=18&version_code=190600&version_name=19.6.0&cookie_enabled=true&screen_width=1536&screen_height=960&browser_language=vi&browser_platform=Win32&browser_name=Chrome&browser_version=146.0.0.0&browser_online=true&engine_name=Blink&engine_version=146.0.0.0&os_name=Windows&os_version=10&device_memory=8&platform=PC&downlink=10&effective_type=4g&round_trip_time=50&webid=7586915507539265034&uifid=5bdad390e71fd6e6e69e3cafe6018169c2447c8bc0b8484cc0f203a274f99fdba2dc9d48a62163b398efb405f116877ea2ef2c778db3bc15c12f675761e674a737bd92355a61ca004cef8a3bb8a735f126db666dc698b186024ce0fb9eeeb677a52f434a1d4c311101f464790c762a9205a9263aeddbe04c9b8a20776eb3de3881d9a0f50f24677ec6d63d397ec6f375e36032852d53433a046f9abad1593df5";
+        // Gọi hàm từ file a_bogus.js
+        const result = get_ab(myUrl);
+        console.log(result)
+
+        // In kết quả ra màn hình web (thay vì chỉ console)
+        document.getElementById("display-url").innerText = result;
+    </script>
+</body>
+</html>
